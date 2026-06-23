@@ -184,7 +184,7 @@
   }
 
   // Service detail page rendering
-  if (window.location.pathname.indexOf('service.html') > -1) {
+  if (window.location.pathname.indexOf('/service') > -1) {
     var params = new URLSearchParams(window.location.search);
     var slug = params.get('slug');
 
