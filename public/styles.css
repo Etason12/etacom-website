@@ -903,9 +903,32 @@ ul {
   padding: 24px 0;
 }
 
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer-bottom p {
   font-size: 0.875rem;
-  text-align: center;
+}
+
+.footer-privacy {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s;
+}
+
+.footer-privacy:hover {
+  color: var(--white);
+}
+
+@media (max-width: 640px) {
+  .footer-bottom-inner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
 }
 
 .nav-dropdown {

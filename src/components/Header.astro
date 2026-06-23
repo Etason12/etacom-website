@@ -15,6 +15,7 @@ const { homeLink = "#" } = Astro.props;
     <ul class="nav-menu" id="navMenu" role="menubar">
       <li><a href={`${homeLink === '#' ? '#home' : '/#home'}`} class="nav-link">Home</a></li>
       <li><a href={`${homeLink === '#' ? '#about' : '/#about'}`} class="nav-link">About</a></li>
+      <li><a href="/portfolio" class="nav-link">Portfolio</a></li>
       <li class="nav-dropdown">
         <a href={`${homeLink === '#' ? '#services' : '/#services'}`} class="nav-link" aria-expanded="false" aria-controls="serviceDropdown">Services <svg class="dropdown-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
         <ul class="dropdown-menu" id="serviceDropdown">
@@ -29,6 +30,7 @@ const { homeLink = "#" } = Astro.props;
           <li><a href="/service?slug=ict-equipment-supply-installation">ICT Equipment Supply & Installation</a></li>
         </ul>
       </li>
+      <li><a href="/blog" class="nav-link">Blog</a></li>
       <li><a href={`${homeLink === '#' ? '#contact' : '/#contact'}`} class="nav-link">Contact Us</a></li>
     </ul>
   </nav>
