@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Service | Etacom Technology" description="Etacom Technology - Service details">
+  <Header homeLink="index.html" />
+
+  <main>
+    <section class="service-hero" id="serviceHero">
+      <div class="service-hero-bg"></div>
+      <div class="container service-hero-content">
+        <a href="index.html#services" class="service-back-link">&larr; All Services</a>
+        <div class="service-hero-icon" id="serviceHeroIcon"></div>
+        <span class="section-tag" id="serviceTag">Service</span>
+        <h1 class="service-hero-title" id="serviceTitle">Loading...</h1>
+        <p class="service-hero-tagline" id="serviceTagline"></p>
+      </div>
+    </section>
+
+    <section class="service-detail section">
+      <div class="container">
+        <noscript>
+          <p style="text-align:center;padding:40px 0;color:var(--text-light);">Please enable JavaScript to view service details, or <a href="index.html#services" style="color:var(--primary);font-weight:600;">browse all services here</a>.</p>
+        </noscript>
+        <div class="service-detail-grid">
+          <div class="service-detail-main">
+            <h2>Overview</h2>
+            <p class="service-detail-text" id="serviceDescription"></p>
+            <h3>What We Deliver</h3>
+            <ul class="service-detail-list" id="serviceDetails"></ul>
+          </div>
+          <aside class="service-detail-sidebar">
+            <div class="sidebar-card">
+              <h3>Benefits</h3>
+              <ul class="sidebar-benefits" id="serviceBenefits"></ul>
+            </div>
+            <div class="sidebar-card">
+              <h3>Technologies</h3>
+              <div class="sidebar-tags" id="serviceTechs"></div>
+            </div>
+            <div class="sidebar-card sidebar-card--cta">
+              <h3>Ready to Get Started?</h3>
+              <p>Let's discuss how we can help with your project.</p>
+              <a href="index.html#contact" class="btn btn-primary btn-full">Contact Us</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

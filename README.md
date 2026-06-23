@@ -1,43 +1,68 @@
-# Astro Starter Kit: Minimal
+# Etacom Technology Website
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Modern corporate website for Etacom Technology — a software, AI, data, and ICT solutions company based in Mekelle, Ethiopia.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Tech Stack
 
-## 🚀 Project Structure
+- [Astro](https://astro.build) — Static site generator
+- Vanilla CSS — Custom properties, responsive design
+- Vanilla JavaScript — No frameworks, no dependencies
 
-Inside of your Astro project, you'll see the following folders and files:
+## Project Structure
 
 ```text
-/
+etacom-website/
 ├── public/
+│   ├── styles.css          # All styles (nav, cards, responsive)
+│   ├── script.js           # Nav, dropdown, form, counters
+│   └── services.js         # Service detail data (9 services)
 ├── src/
+│   ├── layouts/
+│   │   └── Layout.astro    # Shared head, fonts, scripts
+│   ├── components/
+│   │   ├── Header.astro    # Nav bar, hamburger, dropdown
+│   │   └── Footer.astro    # Footer with links, contact
 │   └── pages/
-│       └── index.astro
+│       ├── index.astro     # Homepage
+│       └── service.astro   # Dynamic service detail page
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Commands
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+| Command | Action |
+|:---|:---|
+| `npm install` | Install dependencies |
+| `npm run dev` | Start dev server at `localhost:4321` |
+| `npm run build` | Build to `./dist/` |
+| `npm run preview` | Preview production build |
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Features
 
-## 🧞 Commands
+- Mobile-first responsive design
+- Animated hamburger menu with slide-down dropdown
+- 9 service detail pages via `?slug=` parameter
+- Contact form with Formspree integration
+- Animated stat counters on scroll
+- Sticky header with scroll effect
 
-All commands are run from the root of the project, from a terminal:
+## Deployment (Netlify)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1. Push to GitHub
+2. Connect repo to Netlify
+3. Build command: `npm run build`
+4. Publish directory: `dist/`
 
-## 👀 Want to learn more?
+## Contact Form Setup
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Replace the placeholder in `src/pages/index.astro`:
+
+```
+action="https://formspree.io/f/YOUR_FORM_ID_HERE"
+```
+
+Get your form ID at [formspree.io](https://formspree.io).
+
+## License
+
+Private — Etacom Technology
