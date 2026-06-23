@@ -71,6 +71,24 @@ import Footer from '../components/Footer.astro';
       <div class="container about-grid">
         <div class="about-image">
           <div class="about-image-main">
+            <svg class="about-illustration" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="500" fill="#1a0a0a"/>
+              <circle cx="200" cy="200" r="120" stroke="rgba(220,38,38,0.2)" stroke-width="1" fill="none"/>
+              <circle cx="200" cy="200" r="80" stroke="rgba(220,38,38,0.15)" stroke-width="1" fill="none"/>
+              <circle cx="200" cy="200" r="40" stroke="rgba(220,38,38,0.1)" stroke-width="1" fill="none"/>
+              <line x1="200" y1="80" x2="200" y2="320" stroke="rgba(220,38,38,0.08)" stroke-width="1"/>
+              <line x1="80" y1="200" x2="320" y2="200" stroke="rgba(220,38,38,0.08)" stroke-width="1"/>
+              <line x1="115" y1="115" x2="285" y2="285" stroke="rgba(220,38,38,0.06)" stroke-width="1"/>
+              <line x1="285" y1="115" x2="115" y2="285" stroke="rgba(220,38,38,0.06)" stroke-width="1"/>
+              <circle cx="200" cy="200" r="6" fill="#dc2626"/>
+              <circle cx="200" cy="120" r="4" fill="#dc2626" opacity="0.6"/>
+              <circle cx="200" cy="280" r="4" fill="#dc2626" opacity="0.6"/>
+              <circle cx="120" cy="200" r="4" fill="#dc2626" opacity="0.6"/>
+              <circle cx="280" cy="200" r="4" fill="#dc2626" opacity="0.6"/>
+              <rect x="160" y="360" width="80" height="4" rx="2" fill="rgba(220,38,38,0.3)"/>
+              <rect x="140" y="380" width="120" height="4" rx="2" fill="rgba(220,38,38,0.2)"/>
+              <rect x="170" y="400" width="60" height="4" rx="2" fill="rgba(220,38,38,0.15)"/>
+            </svg>
             <div class="about-image-overlay">
               <span class="about-year">Est. 2023</span>
               <p>Mekelle, Ethiopia</p>
@@ -104,19 +122,19 @@ import Footer from '../components/Footer.astro';
     <section class="stats">
       <div class="container stats-grid">
         <div class="stat-item">
-          <span class="stat-number" data-target="3">0</span>
+          <span class="stat-number" data-target="3" data-suffix="+">0</span>
           <span class="stat-label">Years Experience</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number" data-target="20">0</span>
+          <span class="stat-number" data-target="20" data-suffix="+">0</span>
           <span class="stat-label">Projects Delivered</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number" data-target="15">0</span>
+          <span class="stat-number" data-target="15" data-suffix="+">0</span>
           <span class="stat-label">Happy Clients</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number" data-target="12">0</span>
+          <span class="stat-number" data-target="12" data-suffix="">0</span>
           <span class="stat-label">Team Members</span>
         </div>
       </div>
@@ -131,7 +149,7 @@ import Footer from '../components/Footer.astro';
         </div>
         <div class="services-grid">
           <article class="service-card">
-            <div class="service-icon">
+            <div class="service-icon icon-blue">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             </div>
             <h3>Custom Software Development</h3>
@@ -141,10 +159,10 @@ import Footer from '../components/Footer.astro';
               <li>Enterprise Software</li>
               <li>API Development</li>
             </ul>
-            <a href="service.html?slug=custom-software-development" class="service-card-link">Learn More <span>&rarr;</span></a>
+            <a href="service?slug=custom-software-development" class="service-card-link">Learn More <span>&rarr;</span></a>
           </article>
           <article class="service-card">
-            <div class="service-icon">
+            <div class="service-icon icon-purple">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             </div>
             <h3>AI & Machine Learning</h3>
@@ -154,10 +172,10 @@ import Footer from '../components/Footer.astro';
               <li>NLP & Chatbots</li>
               <li>Computer Vision</li>
             </ul>
-            <a href="service.html?slug=ai-machine-learning" class="service-card-link">Learn More <span>&rarr;</span></a>
+            <a href="service?slug=ai-machine-learning" class="service-card-link">Learn More <span>&rarr;</span></a>
           </article>
           <article class="service-card">
-            <div class="service-icon">
+            <div class="service-icon icon-green">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
             </div>
             <h3>Data Engineering & Analytics</h3>
@@ -167,10 +185,10 @@ import Footer from '../components/Footer.astro';
               <li>Data Warehousing</li>
               <li>Analytics Dashboards</li>
             </ul>
-            <a href="service.html?slug=data-engineering-analytics" class="service-card-link">Learn More <span>&rarr;</span></a>
+            <a href="service?slug=data-engineering-analytics" class="service-card-link">Learn More <span>&rarr;</span></a>
           </article>
           <article class="service-card">
-            <div class="service-icon">
+            <div class="service-icon icon-cyan">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
             </div>
             <h3>Cloud Solutions & DevOps</h3>
@@ -180,10 +198,10 @@ import Footer from '../components/Footer.astro';
               <li>CI/CD Pipelines</li>
               <li>Infrastructure as Code</li>
             </ul>
-            <a href="service.html?slug=cloud-solutions-devops" class="service-card-link">Learn More <span>&rarr;</span></a>
+            <a href="service?slug=cloud-solutions-devops" class="service-card-link">Learn More <span>&rarr;</span></a>
           </article>
           <article class="service-card">
-            <div class="service-icon">
+            <div class="service-icon icon-indigo">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
             </div>
             <h3>Mobile & Web Applications</h3>
@@ -193,10 +211,10 @@ import Footer from '../components/Footer.astro';
               <li>Progressive Web Apps</li>
               <li>UI/UX Design</li>
             </ul>
-            <a href="service.html?slug=mobile-web-applications" class="service-card-link">Learn More <span>&rarr;</span></a>
+            <a href="service?slug=mobile-web-applications" class="service-card-link">Learn More <span>&rarr;</span></a>
           </article>
           <article class="service-card">
-            <div class="service-icon">
+            <div class="service-icon icon-teal">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 0 1 9-9"/></svg>
             </div>
             <h3>Data Visualization & BI</h3>
@@ -206,10 +224,10 @@ import Footer from '../components/Footer.astro';
               <li>Real-time Reporting</li>
               <li>Data Storytelling</li>
             </ul>
-            <a href="service.html?slug=data-visualization-bi" class="service-card-link">Learn More <span>&rarr;</span></a>
+            <a href="service?slug=data-visualization-bi" class="service-card-link">Learn More <span>&rarr;</span></a>
           </article>
           <article class="service-card">
-            <div class="service-icon">
+            <div class="service-icon icon-slate">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             </div>
             <h3>Data Center Solutions</h3>
@@ -219,10 +237,10 @@ import Footer from '../components/Footer.astro';
               <li>Cooling & Power</li>
               <li>Data Center Design</li>
             </ul>
-            <a href="service.html?slug=data-center-solutions" class="service-card-link">Learn More <span>&rarr;</span></a>
+            <a href="service?slug=data-center-solutions" class="service-card-link">Learn More <span>&rarr;</span></a>
           </article>
           <article class="service-card">
-            <div class="service-icon">
+            <div class="service-icon icon-orange">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
             </div>
             <h3>Digital Transformation</h3>
@@ -232,10 +250,10 @@ import Footer from '../components/Footer.astro';
               <li>Legacy Modernization</li>
               <li>Tech Advisory</li>
             </ul>
-            <a href="service.html?slug=digital-transformation" class="service-card-link">Learn More <span>&rarr;</span></a>
+            <a href="service?slug=digital-transformation" class="service-card-link">Learn More <span>&rarr;</span></a>
           </article>
           <article class="service-card">
-            <div class="service-icon">
+            <div class="service-icon icon-pink">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
             </div>
             <h3>ICT Equipment Supply & Installation</h3>
@@ -245,7 +263,7 @@ import Footer from '../components/Footer.astro';
               <li>CCTV & Access Control</li>
               <li>Structured Cabling</li>
             </ul>
-            <a href="service.html?slug=ict-equipment-supply-installation" class="service-card-link">Learn More <span>&rarr;</span></a>
+            <a href="service?slug=ict-equipment-supply-installation" class="service-card-link">Learn More <span>&rarr;</span></a>
           </article>
         </div>
       </div>
@@ -259,16 +277,16 @@ import Footer from '../components/Footer.astro';
           <p class="section-desc">We are proud to have served leading hotels, enterprises, NGOs, and government organizations across Ethiopia.</p>
         </div>
         <div class="clients-grid">
-          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><strong>Northern Star Hotel</strong></div>
-          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><strong>Libanos Hotel</strong></div>
-          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><strong>Nyala Motors</strong></div>
-          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><strong>Homeland Hotel</strong></div>
-          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10 10 10 0 0 0-10-10z"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><strong>IOM Ethiopia</strong></div>
-          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><strong>Balloni Hotel</strong></div>
-          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><strong>Genfel Hotel</strong></div>
-          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><strong>Legasona Vehicle Mfg</strong></div>
+          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 3v15"/><path d="M9 9h1M9 13h1M17 9h1M17 13h1"/></svg></div><strong>Northern Star Hotel</strong></div>
+          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 3v15"/><path d="M9 9h1M9 13h1M17 9h1M17 13h1"/></svg></div><strong>Libanos Hotel</strong></div>
+          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div><strong>Nyala Motors</strong></div>
+          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 3v15"/><path d="M9 9h1M9 13h1M17 9h1M17 13h1"/></svg></div><strong>Homeland Hotel</strong></div>
+          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><strong>IOM Ethiopia</strong></div>
+          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 3v15"/><path d="M9 9h1M9 13h1M17 9h1M17 13h1"/></svg></div><strong>Balloni Hotel</strong></div>
+          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 3v15"/><path d="M9 9h1M9 13h1M17 9h1M17 13h1"/></svg></div><strong>Genfel Hotel</strong></div>
+          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/><circle cx="12" cy="14" r="2"/></svg></div><strong>Legasona Vehicle Mfg</strong></div>
           <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><strong>Yarson Importer</strong></div>
-          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20"/><path d="M4 20V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12"/><path d="M8 20v-4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4"/></svg></div><strong>Water Works</strong></div>
+          <div class="client-item"><div class="client-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20"/><path d="M17 7l-5 5-5-5"/><path d="M17 17l-5-5-5 5"/></svg></div><strong>Water Works</strong></div>
         </div>
       </div>
     </section>

@@ -18,15 +18,15 @@ const { homeLink = "#" } = Astro.props;
       <li class="nav-dropdown">
         <a href={`${homeLink === '#' ? '#services' : 'index.html#services'}`} class="nav-link" aria-expanded="false" aria-controls="serviceDropdown">Services <svg class="dropdown-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
         <ul class="dropdown-menu" id="serviceDropdown">
-          <li><a href="service.html?slug=custom-software-development">Custom Software Development</a></li>
-          <li><a href="service.html?slug=ai-machine-learning">AI & Machine Learning</a></li>
-          <li><a href="service.html?slug=data-engineering-analytics">Data Engineering & Analytics</a></li>
-          <li><a href="service.html?slug=cloud-solutions-devops">Cloud Solutions & DevOps</a></li>
-          <li><a href="service.html?slug=mobile-web-applications">Mobile & Web Applications</a></li>
-          <li><a href="service.html?slug=data-visualization-bi">Data Visualization & BI</a></li>
-          <li><a href="service.html?slug=data-center-solutions">Data Center Solutions</a></li>
-          <li><a href="service.html?slug=digital-transformation">Digital Transformation</a></li>
-          <li><a href="service.html?slug=ict-equipment-supply-installation">ICT Equipment Supply & Installation</a></li>
+          <li><a href="service?slug=custom-software-development">Custom Software Development</a></li>
+          <li><a href="service?slug=ai-machine-learning">AI & Machine Learning</a></li>
+          <li><a href="service?slug=data-engineering-analytics">Data Engineering & Analytics</a></li>
+          <li><a href="service?slug=cloud-solutions-devops">Cloud Solutions & DevOps</a></li>
+          <li><a href="service?slug=mobile-web-applications">Mobile & Web Applications</a></li>
+          <li><a href="service?slug=data-visualization-bi">Data Visualization & BI</a></li>
+          <li><a href="service?slug=data-center-solutions">Data Center Solutions</a></li>
+          <li><a href="service?slug=digital-transformation">Digital Transformation</a></li>
+          <li><a href="service?slug=ict-equipment-supply-installation">ICT Equipment Supply & Installation</a></li>
         </ul>
       </li>
       <li><a href={`${homeLink === '#' ? '#contact' : 'index.html#contact'}`} class="nav-link">Contact Us</a></li>

@@ -91,6 +91,7 @@
 
     statNumbers.forEach(function (stat) {
       var target = parseInt(stat.getAttribute('data-target'), 10);
+      var suffix = stat.getAttribute('data-suffix') || '';
       var duration = 2000;
       var start = performance.now();
 
@@ -98,12 +99,12 @@
         var elapsed = now - start;
         var progress = Math.min(elapsed / duration, 1);
         var eased = 1 - Math.pow(1 - progress, 3);
-        stat.textContent = Math.floor(target * eased);
+        stat.textContent = Math.floor(target * eased) + suffix;
 
         if (progress < 1) {
           requestAnimationFrame(update);
         } else {
-          stat.textContent = target;
+          stat.textContent = target + suffix;
         }
       }
 
@@ -113,6 +114,30 @@
 
   window.addEventListener('scroll', animateStats);
   animateStats();
+
+  // Scroll-spy for active nav state
+  var sections = document.querySelectorAll('section[id]');
+  var navLinksAll = document.querySelectorAll('.nav-link');
+
+  function updateActiveNav() {
+    var scrollPos = window.scrollY + 100;
+    sections.forEach(function (section) {
+      var top = section.offsetTop;
+      var height = section.offsetHeight;
+      var id = section.getAttribute('id');
+      if (scrollPos >= top && scrollPos < top + height) {
+        navLinksAll.forEach(function (link) {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + id || link.getAttribute('href') === 'index.html#' + id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNav);
+  updateActiveNav();
 
   // Contact form handling
   if (contactForm) {
