@@ -319,7 +319,7 @@ import Footer from '../components/Footer.astro';
             </li>
           </ul>
         </div>
-        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" class="contact-form">
+        <form id="contactForm" action={`https://formspree.io/f/${import.meta.env.PUBLIC_FORMSPREE_ID}`} method="POST" class="contact-form">
           <div class="form-group">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" required>
