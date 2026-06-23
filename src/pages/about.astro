@@ -1,0 +1,287 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="About Us | Etacom Technology" description="Learn about Etacom Technology - our story, mission, team, and commitment to driving digital innovation in Ethiopia.">
+  <Header homeLink="/" />
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg"></div>
+      <div class="container page-hero-content">
+        <h1 class="page-hero-title">About Us</h1>
+        <p class="page-hero-desc">Building Ethiopia's digital future through technology and innovation</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-page-grid">
+        <div class="about-page-text">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title">From Mekelle to All of Ethiopia</h2>
+          <p>Founded in 2023 in Mekelle, Etacom Technology started with a simple mission: bring world-class technology solutions to Ethiopian businesses. What began as a small team of engineers has grown into a full-service technology partner serving hotels, enterprises, NGOs, and government organizations across the country.</p>
+          <p>We understand the unique challenges of the Ethiopian market — from infrastructure limitations to the need for solutions that work reliably in local conditions. Our team combines international expertise with deep local knowledge.</p>
+        </div>
+        <div class="about-page-stats">
+          <div class="about-stat">
+            <span class="about-stat-number">3</span>
+            <span class="about-stat-label">Years in Business</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-number">20+</span>
+            <span class="about-stat-label">Projects Delivered</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-number">12</span>
+            <span class="about-stat-label">Team Members</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-number">2</span>
+            <span class="about-stat-label">Office Locations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--neutral-50);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Mission & Vision</span>
+        </div>
+        <div class="mv-grid">
+          <div class="mv-card">
+            <h3>Our Mission</h3>
+            <p>To empower Ethiopian organizations with technology solutions that drive efficiency, enable growth, and create lasting value. We bridge the gap between global technology capabilities and local business needs.</p>
+          </div>
+          <div class="mv-card">
+            <h3>Our Vision</h3>
+            <p>To be Ethiopia's most trusted technology partner — the first choice for organizations seeking reliable, innovative, and impactful digital solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Leadership</span>
+          <h2 class="section-title">Meet Our Team</h2>
+          <p class="section-desc">Experienced professionals passionate about technology and delivering results.</p>
+        </div>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3>Chief Executive Officer</h3>
+            <p class="team-role">Strategy & Leadership</p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3>Chief Technology Officer</h3>
+            <p class="team-role">Engineering & Architecture</p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3>Head of Operations</h3>
+            <p class="team-role">Delivery & Client Success</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--neutral-50);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Values</span>
+          <h2 class="section-title">What We Stand For</h2>
+        </div>
+        <div class="values-grid">
+          <div class="value-item">
+            <h4>Reliability</h4>
+            <p>We deliver on our promises. Every solution we build is designed to work reliably in Ethiopian conditions.</p>
+          </div>
+          <div class="value-item">
+            <h4>Innovation</h4>
+            <p>We stay current with global technology trends and bring the best tools to solve local challenges.</p>
+          </div>
+          <div class="value-item">
+            <h4>Partnership</h4>
+            <p>We don't just build and leave. We become long-term technology partners invested in your success.</p>
+          </div>
+          <div class="value-item">
+            <h4>Integrity</h4>
+            <p>We operate with transparency, honesty, and respect in every client relationship.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="container cta-content">
+        <div>
+          <h2>Want to work with us?</h2>
+          <p>We're always looking for talented people and interesting projects.</p>
+        </div>
+        <a href="/#contact" class="btn btn-white">Get in Touch</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    position: relative;
+    padding: 140px 0 80px;
+    overflow: hidden;
+  }
+  .page-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--dark);
+  }
+  .page-hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  .page-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .page-hero-desc {
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 500px;
+  }
+  .about-page-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .about-page-text p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .about-page-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .about-stat {
+    background: var(--white);
+    border: 1px solid var(--neutral-200);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+  }
+  .about-stat-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+  }
+  .about-stat-label {
+    font-size: 0.875rem;
+    color: var(--text-light);
+  }
+  .mv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .mv-card {
+    background: var(--white);
+    border: 1px solid var(--neutral-200);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+  }
+  .mv-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 12px;
+  }
+  .mv-card p {
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .team-card {
+    background: var(--white);
+    border: 1px solid var(--neutral-200);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    text-align: center;
+  }
+  .team-avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--neutral-100);
+    border-radius: 50%;
+  }
+  .team-avatar svg {
+    width: 36px;
+    height: 36px;
+    color: var(--text-light);
+  }
+  .team-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 4px;
+  }
+  .team-role {
+    font-size: 0.875rem;
+    color: var(--text-light);
+  }
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .value-item h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+  .value-item p {
+    font-size: 0.9375rem;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  @media (max-width: 768px) {
+    .about-page-grid, .mv-grid, .team-grid, .values-grid {
+      grid-template-columns: 1fr;
+    }
+    .about-page-stats {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

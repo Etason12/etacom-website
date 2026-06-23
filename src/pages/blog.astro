@@ -1,0 +1,199 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Blog | Etacom Technology" description="Insights on software, AI, data, and technology trends in Ethiopia from Etacom Technology.">
+  <Header homeLink="/" />
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg"></div>
+      <div class="container page-hero-content">
+        <h1 class="page-hero-title">Blog</h1>
+        <p class="page-hero-desc">Insights on technology, innovation, and digital transformation in Ethiopia</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-category">ICT Infrastructure</span>
+              <span class="blog-date">June 2026</span>
+            </div>
+            <h3>Why Hotels in Ethiopia Need Modern ICT Infrastructure</h3>
+            <p>Guest expectations have changed. Modern hotels need reliable Wi-Fi, IPTV, and smart room controls to stay competitive. Here's what Ethiopian hotels should prioritize.</p>
+            <div class="blog-read-more">
+              <span>Read article &rarr;</span>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-category">AI & Data</span>
+              <span class="blog-date">May 2026</span>
+            </div>
+            <h3>How NGOs Can Use Data Analytics for Better Decision Making</h3>
+            <p>Development organizations collect vast amounts of data but often struggle to turn it into actionable insights. We explore practical approaches to data-driven decisions.</p>
+            <div class="blog-read-more">
+              <span>Read article &rarr;</span>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-category">Digital Transformation</span>
+              <span class="blog-date">April 2026</span>
+            </div>
+            <h3>Digital Transformation for Ethiopian SMEs: Where to Start</h3>
+            <p>Going digital doesn't have to be overwhelming. We break down the first steps any Ethiopian business can take to modernize their operations.</p>
+            <div class="blog-read-more">
+              <span>Read article &rarr;</span>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-category">Data Center</span>
+              <span class="blog-date">March 2026</span>
+            </div>
+            <h3>Data Center Design Considerations for the Ethiopian Climate</h3>
+            <p>High temperatures and power fluctuations present unique challenges for data center operations in Ethiopia. Here's how to design for reliability.</p>
+            <div class="blog-read-more">
+              <span>Read article &rarr;</span>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-category">Software Development</span>
+              <span class="blog-date">February 2026</span>
+            </div>
+            <h3>Custom Software vs Off-the-Shelf: Which Is Right for Your Business?</h3>
+            <p>We compare the pros and cons of building custom software versus using ready-made solutions, and help you decide what fits your needs and budget.</p>
+            <div class="blog-read-more">
+              <span>Read article &rarr;</span>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-meta">
+              <span class="blog-category">Company News</span>
+              <span class="blog-date">January 2026</span>
+            </div>
+            <h3>Etacom Technology Opens Addis Ababa Office</h3>
+            <p>We're expanding! Our new office in Addis Ababa allows us to better serve clients in the capital region and across southern Ethiopia.</p>
+            <div class="blog-read-more">
+              <span>Read article &rarr;</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="container cta-content">
+        <div>
+          <h2>Have a topic suggestion?</h2>
+          <p>We'd love to hear what you'd like us to write about.</p>
+        </div>
+        <a href="/#contact" class="btn btn-white">Let Us Know</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    position: relative;
+    padding: 140px 0 80px;
+    overflow: hidden;
+  }
+  .page-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--dark);
+  }
+  .page-hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  .page-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .page-hero-desc {
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 500px;
+  }
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .blog-card {
+    background: var(--white);
+    border: 1px solid var(--neutral-200);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    transition: all var(--transition);
+    cursor: pointer;
+  }
+  .blog-card:hover {
+    border-color: transparent;
+    box-shadow: var(--shadow-lg);
+  }
+  .blog-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .blog-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--primary);
+    background: var(--gray-100);
+    padding: 4px 10px;
+    border-radius: 50px;
+  }
+  .blog-date {
+    font-size: 0.8125rem;
+    color: var(--text-light);
+  }
+  .blog-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .blog-card > p {
+    font-size: 0.9375rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .blog-read-more {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  @media (max-width: 768px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
