@@ -9,13 +9,13 @@
   const formNote = document.getElementById('formNote');
 
   // Sticky header on scroll
-  window.addEventListener('scroll', function () {
+  function handleHeaderScroll() {
     if (window.scrollY > 50) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
-  });
+  }
 
   // Mobile navigation toggle
   navToggle.addEventListener('click', function () {
@@ -74,19 +74,12 @@
     });
   }
 
-  // Animated counter for stats
+  // Animated counter for stats using IntersectionObserver
   var statNumbers = document.querySelectorAll('.stat-number');
   var statsAnimated = false;
 
   function animateStats() {
     if (statsAnimated) return;
-
-    var statsSection = document.querySelector('.stats');
-    if (!statsSection) return;
-
-    var rect = statsSection.getBoundingClientRect();
-    if (rect.top > window.innerHeight || rect.bottom < 0) return;
-
     statsAnimated = true;
 
     statNumbers.forEach(function (stat) {
@@ -112,8 +105,16 @@
     });
   }
 
-  window.addEventListener('scroll', animateStats);
-  animateStats();
+  var statsSection = document.querySelector('.stats');
+  if (statsSection) {
+    var statsObserver = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+        animateStats();
+        statsObserver.disconnect();
+      }
+    }, { threshold: 0.3 });
+    statsObserver.observe(statsSection);
+  }
 
   // Scroll-spy for active nav state
   var sections = document.querySelectorAll('section[id]');
@@ -128,7 +129,7 @@
       if (scrollPos >= top && scrollPos < top + height) {
         navLinksAll.forEach(function (link) {
           link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + id || link.getAttribute('href') === 'index.html#' + id) {
+          if (link.getAttribute('href') === '#' + id || link.getAttribute('href') === '/#' + id) {
             link.classList.add('active');
           }
         });
@@ -136,7 +137,14 @@
     });
   }
 
-  window.addEventListener('scroll', updateActiveNav);
+  // Merged scroll listener with passive:true
+  window.addEventListener('scroll', function () {
+    handleHeaderScroll();
+    updateActiveNav();
+  }, { passive: true });
+
+  // Run once on load
+  handleHeaderScroll();
   updateActiveNav();
 
   // Contact form handling
