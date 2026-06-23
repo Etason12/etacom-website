@@ -40,17 +40,32 @@ const { title, description, url = 'https://etacomtechnology.com' } = Astro.props
 		"url": "https://etacomtechnology.com",
 		"logo": "https://etacomtechnology.com/favicon.svg",
 		"description": "Software, AI, data solutions, data center, and ICT equipment supplying & installation for hotels, enterprises and NGOs in Ethiopia.",
-		"address": {
-			"@type": "PostalAddress",
-			"addressLocality": "Mekelle",
-			"addressCountry": "ET"
-		},
-		"contactPoint": {
-			"@type": "ContactPoint",
-			"telephone": "+251914000001",
-			"contactType": "customer service",
-			"email": "info@etacomtechnology.com"
-		}
+		"address": [
+			{
+				"@type": "PostalAddress",
+				"addressLocality": "Mekelle",
+				"addressCountry": "ET"
+			},
+			{
+				"@type": "PostalAddress",
+				"addressLocality": "Addis Ababa",
+				"addressCountry": "ET"
+			}
+		],
+		"contactPoint": [
+			{
+				"@type": "ContactPoint",
+				"telephone": "+25191408058",
+				"contactType": "customer service",
+				"areaServed": "Mekelle"
+			},
+			{
+				"@type": "ContactPoint",
+				"telephone": "+251911554969",
+				"contactType": "customer service",
+				"areaServed": "Addis Ababa"
+			}
+		]
 	}
 	</script>
 
