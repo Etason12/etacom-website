@@ -915,7 +915,7 @@ ul {
 
 .footer-legal {
   display: flex;
-  gap: 16px;
+  gap: 24px;
 }
 
 .footer-legal a {
