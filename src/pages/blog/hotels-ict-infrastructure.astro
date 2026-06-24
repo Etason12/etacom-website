@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Why Hotels in Ethiopia Need Modern ICT Infrastructure | Etacom Technology" description="Guest expectations have changed. Modern hotels need reliable Wi-Fi, IPTV, and smart room controls to stay competitive.">
+  <Header homeLink="/" />
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg"></div>
+      <div class="container page-hero-content">
+        <a href="/blog" class="blog-back">&larr; Back to Blog</a>
+        <span class="blog-category">ICT Infrastructure</span>
+        <h1 class="page-hero-title">Why Hotels in Ethiopia Need Modern ICT Infrastructure</h1>
+        <p class="page-hero-desc">June 2026</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container blog-content">
+        <p>Guest expectations have changed dramatically in recent years. Today's travelers expect seamless connectivity, in-room entertainment, and smart controls — whether they're staying at a luxury hotel in Addis Ababa or a business hotel in Mekelle.</p>
+
+        <h2>The Basics: Reliable Wi-Fi</h2>
+        <p>Wi-Fi is no longer a luxury — it's a utility. Guests expect fast, stable internet access in their rooms, conference halls, and common areas. A poorly managed network leads to negative reviews and lost repeat business. Ticket-based WiFi management systems allow hotels to control bandwidth per guest, track usage, and prevent network abuse.</p>
+
+        <h2>Hotel TV & IPTV</h2>
+        <p>Traditional satellite TV is being replaced by IPTV systems that offer on-demand content, casting capabilities, and branded hotel channels. These systems integrate with property management software for automated check-in/check-out TV activation.</p>
+
+        <h2>Security: CCTV & Access Control</h2>
+        <p>Modern CCTV systems with remote monitoring give hotel management peace of mind. Combined with door access and time attendance systems, hotels can secure restricted areas and track staff movements efficiently.</p>
+
+        <h2>Fire Safety: FADS</h2>
+        <p>Fire alarm detection systems are essential for guest safety and regulatory compliance. Early detection and automated alerts can prevent disasters and save lives.</p>
+
+        <h2>Getting Started</h2>
+        <p>The good news is that upgrading ICT infrastructure doesn't have to happen all at once. Start with the most critical systems — typically Wi-Fi and CCTV — and build from there. Work with a local partner who understands the Ethiopian market and can provide ongoing support.</p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero { position: relative; padding: 140px 0 80px; overflow: hidden; }
+  .page-hero-bg { position: absolute; inset: 0; background: var(--dark); }
+  .page-hero-content { position: relative; z-index: 1; }
+  .page-hero-title { font-family: var(--font-heading); font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; color: var(--white); margin-bottom: 12px; }
+  .page-hero-desc { font-size: 1rem; color: rgba(255,255,255,0.6); }
+  .blog-back { display: inline-block; font-size: 0.875rem; color: rgba(255,255,255,0.6); text-decoration: none; margin-bottom: 16px; transition: color 0.2s; }
+  .blog-back:hover { color: var(--white); }
+  .blog-category { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--primary); background: rgba(220,38,38,0.1); padding: 4px 12px; border-radius: 50px; margin-bottom: 12px; }
+  .blog-content { max-width: 720px; }
+  .blog-content h2 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; color: var(--dark); margin: 32px 0 12px; }
+  .blog-content p { font-size: 1rem; color: var(--text); line-height: 1.8; margin-bottom: 16px; }
+</style>

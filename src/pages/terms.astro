@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Terms of Reference | Etacom Technology" description="Etacom Technology terms of reference for projects, contracts, and service agreements.">
+  <Header homeLink="/" />
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg"></div>
+      <div class="container page-hero-content">
+        <h1 class="page-hero-title">Terms of Reference</h1>
+        <p class="page-hero-desc">Last updated: June 2026</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container legal-content">
+        <h2>1. Scope of Services</h2>
+        <p>Etacom Technology provides the following services:</p>
+        <ul>
+          <li>Software development (web, mobile, enterprise applications)</li>
+          <li>AI and machine learning solutions</li>
+          <li>Data engineering, analytics, and visualization</li>
+          <li>Data center design, setup, and maintenance</li>
+          <li>ICT equipment supply and installation (networking, CCTV, PABX, structured cabling)</li>
+          <li>Digital transformation consulting</li>
+        </ul>
+
+        <h2>2. Project Engagement</h2>
+        <p>All projects begin with a requirements gathering phase. Etacom Technology will provide a detailed proposal including scope, timeline, deliverables, and pricing before any work begins. Projects are initiated upon written confirmation and, where applicable, receipt of advance payment as agreed in the contract.</p>
+
+        <h2>3. Deliverables</h2>
+        <p>Deliverables are defined in the project proposal or contract. Etacom Technology commits to delivering all agreed-upon deliverables within the specified timeline. Changes to scope after project initiation will be handled through a formal change request process.</p>
+
+        <h2>4. Payment Terms</h2>
+        <p>Payment terms are defined in each individual project contract. Standard terms typically include:</p>
+        <ul>
+          <li>Advance payment upon project confirmation</li>
+          <li>Milestone-based payments tied to deliverables</li>
+          <li>Final payment upon project completion and acceptance</li>
+        </ul>
+
+        <h2>5. Warranty & Support</h2>
+        <p>Etacom Technology provides a warranty period for all completed projects as specified in the contract. During the warranty period, defects in delivered work will be addressed at no additional cost. Post-warranty support and maintenance agreements are available separately.</p>
+
+        <h2>6. Intellectual Property</h2>
+        <p>Upon full payment, the client receives ownership of all custom-developed deliverables as specified in the contract. Etacom Technology retains the right to use general knowledge, skills, and non-proprietary methodologies gained during the project.</p>
+
+        <h2>7. Confidentiality</h2>
+        <p>Etacom Technology treats all client information as confidential. We do not disclose project details, business data, or proprietary information to third parties without written consent from the client.</p>
+
+        <h2>8. Limitation of Liability</h2>
+        <p>Etacom Technology's liability is limited to the value of the project contract. We are not liable for indirect, consequential, or incidental damages arising from project delays or service interruptions caused by factors beyond our control.</p>
+
+        <h2>9. Force Majeure</h2>
+        <p>Neither party shall be held liable for failure to perform obligations due to circumstances beyond reasonable control, including but not limited to natural disasters, government actions, power outages, or network failures.</p>
+
+        <h2>10. Governing Law</h2>
+        <p>These terms are governed by the laws of the Federal Democratic Republic of Ethiopia. Any disputes shall be resolved through good-faith negotiation, with arbitration as a fallback under Ethiopian arbitration rules.</p>
+
+        <h2>Contact</h2>
+        <p>For questions about these terms, please contact:</p>
+        <ul>
+          <li>Email: <a href="mailto:info@etacomtechnology.com">info@etacomtechnology.com</a></li>
+          <li>Phone (Mekelle): <a href="tel:+25191408058">+251-914-08058</a></li>
+          <li>Phone (Addis Ababa): <a href="tel:+251911554969">+251-911-554969</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    position: relative;
+    padding: 140px 0 80px;
+    overflow: hidden;
+  }
+  .page-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--dark);
+  }
+  .page-hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  .page-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .page-hero-desc {
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.7);
+  }
+  .legal-content {
+    max-width: 760px;
+  }
+  .legal-content h2 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin: 32px 0 12px;
+  }
+  .legal-content h2:first-child {
+    margin-top: 0;
+  }
+  .legal-content p {
+    font-size: 1rem;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+  .legal-content ul {
+    margin: 0 0 16px 20px;
+    list-style: disc;
+  }
+  .legal-content li {
+    font-size: 1rem;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 6px;
+  }
+  .legal-content a {
+    color: var(--primary);
+  }
+  .legal-content a:hover {
+    color: var(--primary-dark);
+  }
+</style>

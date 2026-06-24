@@ -19,7 +19,7 @@ import Footer from '../components/Footer.astro';
     <section class="section">
       <div class="container">
         <div class="blog-grid">
-          <article class="blog-card">
+          <a href="/blog/hotels-ict-infrastructure" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-category">ICT Infrastructure</span>
               <span class="blog-date">June 2026</span>
@@ -29,9 +29,9 @@ import Footer from '../components/Footer.astro';
             <div class="blog-read-more">
               <span>Read article &rarr;</span>
             </div>
-          </article>
+          </a>
 
-          <article class="blog-card">
+          <a href="/blog/ngos-data-analytics" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-category">AI & Data</span>
               <span class="blog-date">May 2026</span>
@@ -41,9 +41,9 @@ import Footer from '../components/Footer.astro';
             <div class="blog-read-more">
               <span>Read article &rarr;</span>
             </div>
-          </article>
+          </a>
 
-          <article class="blog-card">
+          <a href="/blog/digital-transformation-sme" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-category">Digital Transformation</span>
               <span class="blog-date">April 2026</span>
@@ -53,9 +53,9 @@ import Footer from '../components/Footer.astro';
             <div class="blog-read-more">
               <span>Read article &rarr;</span>
             </div>
-          </article>
+          </a>
 
-          <article class="blog-card">
+          <a href="/blog/data-center-ethiopian-climate" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-category">Data Center</span>
               <span class="blog-date">March 2026</span>
@@ -65,9 +65,9 @@ import Footer from '../components/Footer.astro';
             <div class="blog-read-more">
               <span>Read article &rarr;</span>
             </div>
-          </article>
+          </a>
 
-          <article class="blog-card">
+          <a href="/blog/custom-software-vs-offtheshelf" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-category">Software Development</span>
               <span class="blog-date">February 2026</span>
@@ -77,9 +77,9 @@ import Footer from '../components/Footer.astro';
             <div class="blog-read-more">
               <span>Read article &rarr;</span>
             </div>
-          </article>
+          </a>
 
-          <article class="blog-card">
+          <a href="/blog/addis-ababa-office" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-category">Company News</span>
               <span class="blog-date">January 2026</span>
@@ -89,7 +89,7 @@ import Footer from '../components/Footer.astro';
             <div class="blog-read-more">
               <span>Read article &rarr;</span>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
@@ -141,12 +141,14 @@ import Footer from '../components/Footer.astro';
     gap: 24px;
   }
   .blog-card {
+    display: block;
     background: var(--white);
     border: 1px solid var(--neutral-200);
     border-radius: var(--radius-lg);
     padding: 28px;
     transition: all var(--transition);
-    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
   }
   .blog-card:hover {
     border-color: transparent;

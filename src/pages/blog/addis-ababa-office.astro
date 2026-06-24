@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Etacom Technology Opens Addis Ababa Office | Etacom Technology" description="We're expanding! Our new office in Addis Ababa allows us to better serve clients in the capital region.">
+  <Header homeLink="/" />
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg"></div>
+      <div class="container page-hero-content">
+        <a href="/blog" class="blog-back">&larr; Back to Blog</a>
+        <span class="blog-category">Company News</span>
+        <h1 class="page-hero-title">Etacom Technology Opens Addis Ababa Office</h1>
+        <p class="page-hero-desc">January 2026</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container blog-content">
+        <p>We're expanding! Our new office in Addis Ababa allows us to better serve clients in the capital region and across southern Ethiopia.</p>
+
+        <h2>Why Addis Ababa?</h2>
+        <p>As Ethiopia's capital and economic hub, Addis Ababa is home to a growing number of hotels, enterprises, NGOs, and government organizations that need reliable ICT solutions. Having a local presence means faster response times, better on-site support, and stronger relationships with our clients.</p>
+
+        <h2>Two Offices, One Team</h2>
+        <p>Our Mekelle office continues to serve clients in the Tigray region, while the Addis Ababa office expands our reach across Ethiopia. Both offices are staffed with engineers and technicians ready to deploy, maintain, and support ICT infrastructure and software solutions.</p>
+
+        <h2>What This Means for Our Clients</h2>
+        <p>With two offices, we can now offer:</p>
+        <ul>
+          <li>Faster on-site response times</li>
+          <li>Better coverage across Ethiopia</li>
+          <li>Dedicated project teams for large deployments</li>
+          <li>Local support and maintenance contracts</li>
+        </ul>
+
+        <h2>Get in Touch</h2>
+        <p>Whether you're in Mekelle, Addis Ababa, or anywhere in Ethiopia, we're ready to help. Contact us to discuss your next project.</p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero { position: relative; padding: 140px 0 80px; overflow: hidden; }
+  .page-hero-bg { position: absolute; inset: 0; background: var(--dark); }
+  .page-hero-content { position: relative; z-index: 1; }
+  .page-hero-title { font-family: var(--font-heading); font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; color: var(--white); margin-bottom: 12px; }
+  .page-hero-desc { font-size: 1rem; color: rgba(255,255,255,0.6); }
+  .blog-back { display: inline-block; font-size: 0.875rem; color: rgba(255,255,255,0.6); text-decoration: none; margin-bottom: 16px; transition: color 0.2s; }
+  .blog-back:hover { color: var(--white); }
+  .blog-category { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--primary); background: rgba(220,38,38,0.1); padding: 4px 12px; border-radius: 50px; margin-bottom: 12px; }
+  .blog-content { max-width: 720px; }
+  .blog-content h2 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; color: var(--dark); margin: 32px 0 12px; }
+  .blog-content p { font-size: 1rem; color: var(--text); line-height: 1.8; margin-bottom: 16px; }
+  .blog-content ul { margin: 0 0 16px 20px; list-style: disc; }
+  .blog-content li { font-size: 1rem; color: var(--text); line-height: 1.8; margin-bottom: 4px; }
+</style>

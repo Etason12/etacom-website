@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Data Center Design Considerations for the Ethiopian Climate | Etacom Technology" description="High temperatures and power fluctuations present unique challenges for data center operations in Ethiopia.">
+  <Header homeLink="/" />
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg"></div>
+      <div class="container page-hero-content">
+        <a href="/blog" class="blog-back">&larr; Back to Blog</a>
+        <span class="blog-category">Data Center</span>
+        <h1 class="page-hero-title">Data Center Design Considerations for the Ethiopian Climate</h1>
+        <p class="page-hero-desc">March 2026</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container blog-content">
+        <p>High temperatures and power fluctuations present unique challenges for data center operations in Ethiopia. Designing for reliability means addressing these factors from the start.</p>
+
+        <h2>Cooling Challenges</h2>
+        <p>Ethiopia's climate varies significantly by region. In lowland areas, ambient temperatures can exceed 40°C. Proper cooling design — including redundant AC units, hot/cold aisle containment, and temperature monitoring — is essential to prevent hardware failure.</p>
+
+        <h2>Power Stability</h2>
+        <p>Power grid instability is a reality in many parts of Ethiopia. A robust UPS (Uninterruptible Power Supply) system with sufficient battery backup, combined with generator backup, ensures continuous operation during outages. Automatic transfer switches (ATS) minimize switchover time.</p>
+
+        <h2>Dust and Environmental Control</h2>
+        <p>Dust is a silent killer of server hardware. Proper air filtration, sealed cable entries, and regular maintenance schedules keep particles out of the server room.</p>
+
+        <h2>Scalability</h2>
+        <p>Design your data center with growth in mind. Modular rack layouts, scalable cooling capacity, and预留 power circuits allow you to expand without major reconstruction.</p>
+
+        <h2>Local Support</h2>
+        <p>Having a local team that can respond to emergencies within hours — not days — is critical. This is why working with a partner like Etacom, with offices in both Mekelle and Addis Ababa, ensures rapid on-site support when you need it most.</p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero { position: relative; padding: 140px 0 80px; overflow: hidden; }
+  .page-hero-bg { position: absolute; inset: 0; background: var(--dark); }
+  .page-hero-content { position: relative; z-index: 1; }
+  .page-hero-title { font-family: var(--font-heading); font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; color: var(--white); margin-bottom: 12px; }
+  .page-hero-desc { font-size: 1rem; color: rgba(255,255,255,0.6); }
+  .blog-back { display: inline-block; font-size: 0.875rem; color: rgba(255,255,255,0.6); text-decoration: none; margin-bottom: 16px; transition: color 0.2s; }
+  .blog-back:hover { color: var(--white); }
+  .blog-category { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--primary); background: rgba(220,38,38,0.1); padding: 4px 12px; border-radius: 50px; margin-bottom: 12px; }
+  .blog-content { max-width: 720px; }
+  .blog-content h2 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; color: var(--dark); margin: 32px 0 12px; }
+  .blog-content p { font-size: 1rem; color: var(--text); line-height: 1.8; margin-bottom: 16px; }
+</style>

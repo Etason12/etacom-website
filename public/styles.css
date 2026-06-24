@@ -913,13 +913,18 @@ ul {
   font-size: 0.875rem;
 }
 
-.footer-privacy {
+.footer-legal {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-legal a {
   font-size: 0.8125rem;
   color: rgba(255,255,255,0.5);
   transition: color 0.2s;
 }
 
-.footer-privacy:hover {
+.footer-legal a:hover {
   color: var(--white);
 }
 
