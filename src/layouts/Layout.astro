@@ -78,7 +78,7 @@ const { title, description, url = 'https://etacomtechnology.com' } = Astro.props
 </head>
 <body>
 	<slot />
-	<script src="/services.js"></script>
-	<script src="/script.js"></script>
+	<script src="/services.js" is:inline></script>
+	<script src="/script.js" is:inline></script>
 </body>
 </html>
