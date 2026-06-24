@@ -23,6 +23,7 @@ import Footer from '../components/Footer.astro';
           <h2 class="section-title">From Mekelle to All of Ethiopia</h2>
           <p>Founded in 2023 in Mekelle, Etacom Technology started with a simple mission: bring world-class technology solutions to Ethiopian businesses. What began as a small team of engineers has grown into a full-service technology partner serving hotels, enterprises, NGOs, and government organizations across the country.</p>
           <p>We understand the unique challenges of the Ethiopian market — from infrastructure limitations to the need for solutions that work reliably in local conditions. Our team combines international expertise with deep local knowledge.</p>
+          <a href="/profile" class="btn btn-primary btn-download">Download Company Profile</a>
         </div>
         <div class="about-page-stats">
           <div class="about-stat">
@@ -275,6 +276,12 @@ import Footer from '../components/Footer.astro';
     font-size: 0.9375rem;
     color: var(--text-light);
     line-height: 1.6;
+  }
+  .btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
   }
   @media (max-width: 768px) {
     .about-page-grid, .mv-grid, .team-grid, .values-grid {

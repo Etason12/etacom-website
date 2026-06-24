@@ -1,0 +1,334 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Company Profile | Etacom Technology" description="Etacom Technology company profile - software, AI, data, and ICT solutions provider in Ethiopia.">
+  <Header homeLink="/" />
+
+  <main>
+    <div class="profile-toolbar">
+      <button id="downloadPdfBtn" class="btn btn-primary">Download as PDF</button>
+    </div>
+
+    <div class="profile-page" id="profileContent">
+      <header class="profile-header">
+        <div class="profile-logo-area">
+          <span class="profile-logo">E</span>
+          <div>
+            <h1>Etacom Technology</h1>
+            <p>Software · AI · Data · ICT Solutions</p>
+          </div>
+        </div>
+        <p class="profile-tagline">Your trusted partner for software, AI, data, data center, and ICT solutions driving digital innovation across Ethiopia.</p>
+      </header>
+
+      <section class="profile-section">
+        <h2>Company Overview</h2>
+        <p>Founded in 2023 in Mekelle, Etacom Technology has quickly established itself as a reliable full-service technology partner. We deliver software, AI, data solutions, data center infrastructure, and ICT equipment supply & installation to hotels, enterprises, NGOs, and government organizations across Ethiopia.</p>
+        <p>We combine deep technical expertise with a passion for innovation to deliver solutions that drive efficiency, unlock insights, and create lasting value for every client we serve.</p>
+      </section>
+
+      <section class="profile-section">
+        <h2>Our Services</h2>
+        <div class="profile-services">
+          <div class="profile-service">
+            <h3>Custom Software Development</h3>
+            <p>Tailored web, mobile, and enterprise applications built with modern architectures, clean code, and scalable infrastructure. We build what your business actually needs.</p>
+          </div>
+          <div class="profile-service">
+            <h3>AI & Machine Learning</h3>
+            <p>Intelligent solutions including predictive analytics, natural language processing, computer vision systems, and process automation powered by cutting-edge AI.</p>
+          </div>
+          <div class="profile-service">
+            <h3>Data Engineering & Analytics</h3>
+            <p>End-to-end data pipelines, warehousing, and analytics infrastructure that turn raw data into actionable business insights and real-time dashboards.</p>
+          </div>
+          <div class="profile-service">
+            <h3>Cloud Solutions & DevOps</h3>
+            <p>Cloud migration, infrastructure automation, and CI/CD pipelines for reliable, scalable, and secure application deployments.</p>
+          </div>
+          <div class="profile-service">
+            <h3>Data Center Solutions</h3>
+            <p>Design, supply, and installation of data center infrastructure including servers, storage, cooling, power systems, and security.</p>
+          </div>
+          <div class="profile-service">
+            <h3>ICT Equipment Supply & Installation</h3>
+            <p>Supply, installation, and configuration of networking, Wi-Fi, CCTV, PABX, structured cabling, and access control systems.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile-section">
+        <h2>Industries We Serve</h2>
+        <ul class="profile-industries">
+          <li><strong>Hotels & Hospitality</strong> — Hotel TV, IPTV, guest Wi-Fi, CCTV, structured cabling, property management systems, and custom chatbot solutions</li>
+          <li><strong>NGOs & Development Organizations</strong> — Data analytics dashboards, reporting systems, CCTV installation for field offices</li>
+          <li><strong>Manufacturing & Enterprise</strong> — ERP systems (inventory, POS, CRM), LAN infrastructure, digital transformation</li>
+          <li><strong>Government</strong> — Data center design, network infrastructure, security systems</li>
+        </ul>
+      </section>
+
+      <section class="profile-section">
+        <h2>Our Clients</h2>
+        <div class="profile-clients">
+          <span>Northern Star Hotel</span><span>Libanos Hotel</span><span>Nyala Motors</span>
+          <span>Homeland Hotel</span><span>IOM Ethiopia</span><span>Balloni Hotel</span>
+          <span>Genfel Hotel</span><span>Legasona Vehicle Mfg</span><span>Yarson Importer</span>
+          <span>Daramba Hotel</span><span>Water Works</span>
+        </div>
+      </section>
+
+      <section class="profile-section">
+        <h2>Why Choose Etacom?</h2>
+        <ul class="profile-why">
+          <li>Skilled engineers, data scientists, and ICT technicians with international expertise</li>
+          <li>Modern technology stack and industry best practices</li>
+          <li>End-to-end project delivery, installation, and ongoing support</li>
+          <li>Deep understanding of the Ethiopian market and local conditions</li>
+          <li>Long-term partnership approach — we don't just build and leave</li>
+          <li>Two office locations: Mekelle and Addis Ababa</li>
+        </ul>
+      </section>
+
+      <footer class="profile-footer">
+        <div class="profile-contact">
+          <div>
+            <strong>Mekelle Office</strong>
+            <span>+251-914-08058</span>
+          </div>
+          <div>
+            <strong>Addis Ababa Office</strong>
+            <span>+251-911-554969</span>
+          </div>
+          <div>
+            <strong>Email</strong>
+            <span>info@etacomtechnology.com</span>
+          </div>
+        </div>
+        <p class="profile-copy">&copy; 2026 Etacom Technology. All rights reserved. Founded 2023.</p>
+      </footer>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script is:inline>
+  document.getElementById('downloadPdfBtn')?.addEventListener('click', function () {
+    const element = document.getElementById('profileContent');
+    const opt = {
+      margin:       0.5,
+      filename:     'Etacom_Technology_Company_Profile.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2, useCORS: true },
+      jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+    html2pdf().set(opt).from(element).save();
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" is:inline></script>
+
+<style>
+  .profile-toolbar {
+    max-width: 800px;
+    margin: 24px auto 0;
+    padding: 0 24px;
+    text-align: right;
+  }
+  .profile-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 48px;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-lg);
+    font-family: 'DM Sans', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+  }
+  .profile-header {
+    text-align: center;
+    padding-bottom: 32px;
+    border-bottom: 3px solid #dc2626;
+    margin-bottom: 32px;
+  }
+  .profile-logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .profile-logo {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dc2626;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+    border-radius: 14px;
+    font-family: 'Outfit', sans-serif;
+  }
+  .profile-logo-area h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    text-align: left;
+  }
+  .profile-logo-area p {
+    font-size: 0.875rem;
+    color: #dc2626;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-align: left;
+    margin: 2px 0 0;
+  }
+  .profile-tagline {
+    font-size: 1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .profile-section {
+    margin-bottom: 28px;
+  }
+  .profile-section h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #dc2626;
+    margin: 0 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  .profile-section p {
+    font-size: 0.9375rem;
+    color: #444;
+    margin: 0 0 10px;
+  }
+  .profile-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .profile-service {
+    break-inside: avoid;
+  }
+  .profile-service h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 4px;
+  }
+  .profile-service p {
+    font-size: 0.8125rem;
+    color: #666;
+    margin: 0;
+  }
+  .profile-industries {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .profile-industries li {
+    font-size: 0.9375rem;
+    color: #444;
+    padding: 6px 0;
+    padding-left: 16px;
+    position: relative;
+  }
+  .profile-industries li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 6px;
+    height: 6px;
+    background: #dc2626;
+    border-radius: 50%;
+  }
+  .profile-clients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .profile-clients span {
+    font-size: 0.8125rem;
+    color: #555;
+    background: #f5f5f5;
+    padding: 4px 12px;
+    border-radius: 50px;
+  }
+  .profile-why {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .profile-why li {
+    font-size: 0.9375rem;
+    color: #444;
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  .profile-why li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: #dc2626;
+    font-weight: 700;
+  }
+  .profile-footer {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 2px solid #f0f0f0;
+  }
+  .profile-contact {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .profile-contact div {
+    text-align: center;
+  }
+  .profile-contact strong {
+    display: block;
+    font-size: 0.8125rem;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+  }
+  .profile-contact span {
+    font-size: 0.8125rem;
+    color: #666;
+  }
+  .profile-copy {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #999;
+    margin: 0;
+  }
+
+  @media print {
+    .profile-toolbar { display: none; }
+    .header, .footer { display: none; }
+    .profile-page { box-shadow: none; border-radius: 0; padding: 0; max-width: 100%; }
+  }
+
+  @media (max-width: 640px) {
+    .profile-page { padding: 24px; }
+    .profile-services { grid-template-columns: 1fr; }
+    .profile-logo-area { flex-direction: column; text-align: center; }
+    .profile-logo-area h1, .profile-logo-area p { text-align: center; }
+  }
+</style>
